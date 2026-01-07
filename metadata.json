@@ -1,0 +1,9 @@
+{
+  "name": "Golf Super-App",
+  "description": "A comprehensive golf companion app featuring tournament tracking, caddie booking, pro shop, and an AI-powered coaching assistant using Gemini models.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
