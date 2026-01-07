@@ -1,6 +1,6 @@
 {
-  "name": "Golf Super-App",
-  "description": "A comprehensive golf companion app featuring tournament tracking, caddie booking, pro shop, and an AI-powered coaching assistant using Gemini models.",
+  "name": "Super App de Golf",
+  "description": "Una aplicación completa de golf con seguimiento de torneos, reserva de caddies, tienda profesional y un asistente de entrenamiento impulsado por IA usando modelos Gemini.",
   "requestFramePermissions": [
     "camera",
     "microphone",

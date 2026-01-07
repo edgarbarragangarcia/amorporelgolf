@@ -4,12 +4,15 @@ import { ProductDetail } from './components/Screens/ProductDetail';
 import { TournamentFeed } from './components/Screens/TournamentFeed';
 import { CaddieSelect } from './components/Screens/CaddieSelect';
 import { AICoach } from './components/Screens/AICoach';
+import { SignUp } from './components/Screens/SignUp';
+import { Profile } from './components/Screens/Profile';
 import { BottomNav } from './components/Navigation/BottomNav';
 import { Screen } from './types';
 
 const App: React.FC = () => {
   const [currentScreen, setCurrentScreen] = useState<Screen>(Screen.Dashboard);
   const [previousScreen, setPreviousScreen] = useState<Screen>(Screen.Dashboard);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const navigateTo = (screen: Screen) => {
     if (screen !== currentScreen) {
@@ -23,6 +26,10 @@ const App: React.FC = () => {
     setCurrentScreen(previousScreen);
   };
 
+  if (!isLoggedIn) {
+      return <SignUp onLogin={() => setIsLoggedIn(true)} />;
+  }
+
   const renderScreen = () => {
     switch (currentScreen) {
       case Screen.Dashboard:
@@ -35,6 +42,8 @@ const App: React.FC = () => {
         return <CaddieSelect onBack={() => navigateTo(Screen.Dashboard)} />;
       case Screen.AICoach:
         return <AICoach onBack={goBack} />;
+      case Screen.Profile:
+        return <Profile onNavigate={navigateTo} onLogout={() => setIsLoggedIn(false)} />;
       default:
         return <Dashboard onNavigate={navigateTo} />;
     }

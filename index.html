@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="es" class="light">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Golf Super-App</title>
     
+    <!-- PWA Settings -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#51c878" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Golf App" />
+    <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/aida-public/AB6AXuDOF8TBU1r9mtjFfy86nTvrJlChozsVlEHi61d2DBiNR3Ws_UFrRW6ZghlxxYpSLhBwkosJ3TWdjw6YYeYlXj3679sACw0k_ev3UG4--PfTCkmEhsham5x_JVxgpd2fe0GN7MJ0jVvkptnvbBmxGvpXGJik0ckjBXTTB_9Fshvx6e9ufwjKDby1xXJdyd5li7roCr0WF_ejHZk7jcjX5O-5bG6aKvN9jAVdv9jvgq0TMfg48ky8pyF51ihc9Xoxj-Y5SlXQVvZ3LzoR" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +46,10 @@
             boxShadow: {
               glow: '0 0 15px rgba(81, 200, 120, 0.3)',
               soft: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+            },
+            spacing: {
+              'safe-top': 'env(safe-area-inset-top)',
+              'safe-bottom': 'env(safe-area-inset-bottom)',
             }
           },
         },
@@ -47,6 +59,7 @@
       body {
         min-height: 100vh;
         overscroll-behavior-y: none;
+        -webkit-tap-highlight-color: transparent;
       }
       .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -63,6 +76,11 @@
       .dark .glass {
         background: rgba(24, 24, 27, 0.85);
       }
+      /* Prevent text selection usually found in apps */
+      .select-none {
+        user-select: none;
+        -webkit-user-select: none;
+      }
     </style>
   <script type="importmap">
 {
@@ -75,7 +93,7 @@
 }
 </script>
 </head>
-  <body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-display antialiased selection:bg-primary selection:text-white">
+  <body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-display antialiased selection:bg-primary selection:text-white select-none">
     <div id="root"></div>
   </body>
 </html>

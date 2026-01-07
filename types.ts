@@ -6,7 +6,8 @@ export enum Screen {
   AICoach = 'ai_coach',
   Shop = 'shop',
   Events = 'events',
-  Profile = 'profile'
+  Profile = 'profile',
+  SignUp = 'signup'
 }
 
 export interface Caddie {

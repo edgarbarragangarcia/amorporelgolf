@@ -9,7 +9,7 @@ interface AICoachProps {
 export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
   const [activeMode, setActiveMode] = useState<AIMode>(AIMode.Chat);
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string }[]>([
-    { role: 'ai', text: "Hi Alex! I'm your AI Caddie. How can I help your game today?" }
+    { role: 'ai', text: "¡Hola Alex! Soy tu Caddie IA. ¿Cómo puedo ayudarte con tu juego hoy?" }
   ]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +33,7 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
         response = await GeminiService.findNearbyCourses(36.57, -121.95); // Mock coords for Pebble Beach area
     } else if (activeMode === AIMode.Veo) {
         const url = await GeminiService.generateFlyover(userMsg);
-        response = url ? `I've generated a flyover preview for you: ${url}` : "Sorry, I couldn't generate the video right now.";
+        response = url ? `He generado una vista previa del sobrevuelo para ti: ${url}` : "Lo siento, no pude generar el video en este momento.";
     }
 
     setMessages(prev => [...prev, { role: 'ai', text: response }]);
@@ -50,8 +50,8 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
       reader.onloadend = async () => {
           const base64 = (reader.result as string).split(',')[1];
           // Use Flash Image for analysis
-          const analysis = await GeminiService.analyzeSwingPhoto(base64, "Analyze this golf swing stance.");
-          setMessages(prev => [...prev, { role: 'user', text: "[Image Uploaded]" }, { role: 'ai', text: analysis }]);
+          const analysis = await GeminiService.analyzeSwingPhoto(base64, "Analiza esta postura de golf.");
+          setMessages(prev => [...prev, { role: 'user', text: "[Imagen Subida]" }, { role: 'ai', text: analysis }]);
           setIsLoading(false);
       };
       reader.readAsDataURL(file);
@@ -65,10 +65,10 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
           <span className="material-symbols-outlined">expand_more</span>
         </button>
         <div className="flex flex-col items-center">
-          <span className="text-sm font-bold">AI Coach</span>
+          <span className="text-sm font-bold">Caddie IA</span>
           <span className="text-[10px] text-primary flex items-center gap-1">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
-            Online
+            En Línea
           </span>
         </div>
         <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10">
@@ -80,10 +80,10 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
       <div className="flex gap-2 p-2 overflow-x-auto no-scrollbar border-b border-gray-100 dark:border-white/5 bg-gray-50 dark:bg-black/20">
         {[
           { id: AIMode.Chat, icon: 'chat_bubble', label: 'Chat' },
-          { id: AIMode.Voice, icon: 'mic', label: 'Live' },
+          { id: AIMode.Voice, icon: 'mic', label: 'En Vivo' },
           { id: AIMode.Vision, icon: 'image_search', label: 'Swing ID' },
-          { id: AIMode.Veo, icon: 'movie', label: 'Flyover' },
-          { id: AIMode.Maps, icon: 'map', label: 'Courses' },
+          { id: AIMode.Veo, icon: 'movie', label: 'Sobrevuelo' },
+          { id: AIMode.Maps, icon: 'map', label: 'Campos' },
         ].map((mode) => (
           <button
             key={mode.id}
@@ -111,7 +111,7 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
             }`}>
               {msg.text.includes('http') ? (
                   <div className="flex flex-col gap-2">
-                      <span>Here is your generated video:</span>
+                      <span>Aquí tienes tu video generado:</span>
                       <video src={msg.text} controls className="rounded-lg w-full" />
                   </div>
               ) : msg.text}
@@ -135,7 +135,7 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
              <label className="flex items-center justify-center w-full h-12 border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-xl cursor-pointer hover:border-primary transition-colors">
                  <div className="flex items-center gap-2 text-gray-500">
                      <span className="material-symbols-outlined">add_a_photo</span>
-                     <span className="text-sm font-medium">Upload Swing Photo</span>
+                     <span className="text-sm font-medium">Subir Foto de Swing</span>
                  </div>
                  <input type="file" className="hidden" accept="image/*" onChange={handleFileUpload} />
              </label>
@@ -147,7 +147,7 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
                         <span className="material-symbols-outlined text-4xl">mic</span>
                     </button>
                 </div>
-                <p className="text-sm text-gray-500">Listening...</p>
+                <p className="text-sm text-gray-500">Escuchando...</p>
             </div>
         ) : (
             <div className="flex items-center gap-2">
@@ -159,7 +159,7 @@ export const AICoach: React.FC<AICoachProps> = ({ onBack }) => {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                placeholder={activeMode === AIMode.Veo ? "Describe the flyover..." : "Ask your coach..."}
+                placeholder={activeMode === AIMode.Veo ? "Describe el sobrevuelo..." : "Pregunta a tu entrenador..."}
                 className="flex-1 bg-gray-100 dark:bg-card-dark border-none rounded-full px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary/50 text-gray-900 dark:text-white"
             />
             <button 

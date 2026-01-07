@@ -12,7 +12,8 @@ export const GeminiService = {
     try {
       const model = 'gemini-3-pro-preview';
       const config: any = {
-        systemInstruction: "You are an expert golf coach and caddie. Provide strategic, technical, and mental advice.",
+        // Updated system instruction to Spanish
+        systemInstruction: "Eres un experto entrenador de golf y caddie. Proporciona consejos estratégicos, técnicos y mentales en español.",
         tools: [{ googleSearch: {} }] // Search grounding
       };
 
@@ -26,10 +27,10 @@ export const GeminiService = {
         config
       });
 
-      return response.text || "I couldn't generate a response.";
+      return response.text || "No pude generar una respuesta.";
     } catch (error) {
       console.error("Chat error:", error);
-      return "Sorry, I'm having trouble connecting to the clubhouse right now.";
+      return "Lo siento, tengo problemas para conectar con la casa club en este momento.";
     }
   },
 
@@ -42,7 +43,7 @@ export const GeminiService = {
         contents: {
           parts: [
             { inlineData: { mimeType: 'image/jpeg', data: base64Image } },
-            { text: prompt || "Analyze this golf stance and suggest improvements." }
+            { text: prompt || "Analiza esta postura de golf y sugiere mejoras en español." }
           ]
         }
       });
@@ -51,10 +52,10 @@ export const GeminiService = {
       // For this feature "Edit", we might want to use generateContent with instructions to edit if supported, 
       // but usually for pixel-level editing we might need specific endpoints or detailed prompting.
       // Here we return the text analysis.
-      return response.text || "Analysis complete.";
+      return response.text || "Análisis completado.";
     } catch (error) {
       console.error("Vision error:", error);
-      return "Could not analyze the image.";
+      return "No se pudo analizar la imagen.";
     }
   },
 
@@ -64,7 +65,7 @@ export const GeminiService = {
       const model = 'gemini-2.5-flash';
       const response = await ai.models.generateContent({
         model,
-        contents: "Find the top 3 rated golf courses near me and their distance.",
+        contents: "Encuentra los 3 mejores campos de golf cerca de mí y su distancia. Responde en español.",
         config: {
           tools: [{ googleMaps: {} }],
           toolConfig: {
@@ -74,10 +75,10 @@ export const GeminiService = {
           }
         }
       });
-      return response.text || "No courses found nearby.";
+      return response.text || "No se encontraron campos cercanos.";
     } catch (error) {
       console.error("Maps error:", error);
-      return "Could not access maps data.";
+      return "No se pudo acceder a los datos de mapas.";
     }
   },
 

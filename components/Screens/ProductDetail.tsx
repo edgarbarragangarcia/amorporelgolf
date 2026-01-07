@@ -63,7 +63,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ onBack }) => {
               </div>
             </div>
             <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-              Engineered with 60X Carbon Twist Face for lighter, faster, and more forgiving performance.
+              Diseñado con cara de carbono 60X para un rendimiento más ligero, rápido y permisivo.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ onBack }) => {
             {[
               { icon: 'golf_course', label: 'Loft', val: '10.5°' },
               { icon: 'waves', label: 'Flex', val: 'Stiff' },
-              { icon: 'pan_tool', label: 'Hand', val: 'Right' }
+              { icon: 'pan_tool', label: 'Mano', val: 'Derecha' }
             ].map((spec, i) => (
               <div key={i} className="bg-white dark:bg-card-dark p-4 rounded-xl shadow-soft flex flex-col items-center justify-center gap-2 text-center aspect-square border border-gray-100 dark:border-gray-800">
                 <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-1">
@@ -86,29 +86,29 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ onBack }) => {
 
           {/* Selectors */}
           <div className="flex flex-col gap-4">
-            <span className="text-sm font-bold text-gray-900 dark:text-white">Colorway</span>
+            <span className="text-sm font-bold text-gray-900 dark:text-white">Colores</span>
             <div className="flex gap-4">
               <label className="group relative cursor-pointer">
                 <input type="radio" name="color" className="peer sr-only" defaultChecked />
                 <div className="h-12 w-12 rounded-full bg-gradient-to-br from-red-600 to-black ring-2 ring-transparent ring-offset-2 ring-offset-background-light peer-checked:ring-red-500 transition-all"></div>
-                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 peer-checked:opacity-100 transition-opacity whitespace-nowrap">Stealth Red</span>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 peer-checked:opacity-100 transition-opacity whitespace-nowrap">Rojo Stealth</span>
               </label>
               <label className="group relative cursor-pointer">
                 <input type="radio" name="color" className="peer sr-only" />
                 <div className="h-12 w-12 rounded-full bg-gradient-to-br from-[#51c878] to-black ring-2 ring-transparent ring-offset-2 ring-offset-background-light peer-checked:ring-primary transition-all"></div>
-                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 peer-checked:opacity-100 transition-opacity whitespace-nowrap">Emerald</span>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 peer-checked:opacity-100 transition-opacity whitespace-nowrap">Esmeralda</span>
               </label>
             </div>
           </div>
 
           {/* Upsell */}
           <div className="flex flex-col gap-3">
-            <span className="text-sm font-bold text-gray-900 dark:text-white">Complete the Look</span>
+            <span className="text-sm font-bold text-gray-900 dark:text-white">Completa el Look</span>
             <div className="flex gap-4 overflow-x-auto no-scrollbar pb-2">
               <div className="min-w-[140px] bg-white dark:bg-card-dark rounded-xl p-3 border border-gray-100 dark:border-gray-800 flex flex-col gap-2">
                 <div className="w-full aspect-[4/5] rounded-lg bg-gray-100 dark:bg-gray-800 bg-cover bg-center" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwDS7jhKhanPQrtDsz1D9hSPgNGkqV66RlcfPip_yMB5O-ZSNC_WEy6-3SXt8M5m1nTt1wX6vqNsuZdIPwVTYNeMmoDzNW1CuGHQxOgDJCgRU4itIMpgufYkExRBaUttgeacUfI6pFBGHyoyj8s-y7SxspeB1Aix4DWBd_XEdJ_kWORwUC6u8Y3CTJRPhEUVqUrXwhQ9USSTRASF5iu8tNpSSUdz8Rtbzq-86wY7AHLW-opzhNdpGKiX5LjCcJDsCU9l6C0YkdoJDf")' }}></div>
                 <div>
-                  <h4 className="text-xs font-bold text-gray-900 dark:text-white truncate">Tour Polo</h4>
+                  <h4 className="text-xs font-bold text-gray-900 dark:text-white truncate">Polo Tour</h4>
                   <span className="text-xs text-primary font-medium">$85.00</span>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ onBack }) => {
           </button>
         </div>
         <button className="flex-1 h-12 bg-primary hover:bg-primary-dark active:scale-[0.98] transition-all rounded-full flex items-center justify-center gap-2 shadow-glow text-white font-bold text-[15px] tracking-wide">
-          <span>Add to Cart</span>
+          <span>Añadir al Carrito</span>
           <span className="bg-white/20 px-1.5 py-0.5 rounded text-[11px] font-semibold">$599</span>
         </button>
       </div>

@@ -12,7 +12,7 @@ export const CaddieSelect: React.FC<CaddieSelectProps> = ({ onBack }) => {
           <button onClick={onBack} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
             <span className="material-symbols-outlined text-2xl">arrow_back</span>
           </button>
-          <h1 className="text-lg font-bold tracking-tight">Select Caddie</h1>
+          <h1 className="text-lg font-bold tracking-tight">Seleccionar Caddie</h1>
           <button className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
             <span className="material-symbols-outlined text-2xl">calendar_month</span>
           </button>
@@ -26,22 +26,22 @@ export const CaddieSelect: React.FC<CaddieSelectProps> = ({ onBack }) => {
               <span className="material-symbols-outlined">location_on</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Location & Time</span>
-              <p className="text-sm font-bold text-gray-900 dark:text-white leading-tight">Pebble Beach • Tomorrow, 8:00 AM</p>
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Ubicación y Hora</span>
+              <p className="text-sm font-bold text-gray-900 dark:text-white leading-tight">Pebble Beach • Mañana, 8:00 AM</p>
             </div>
-            <button className="ml-auto text-primary text-sm font-semibold">Edit</button>
+            <button className="ml-auto text-primary text-sm font-semibold">Editar</button>
           </div>
         </div>
 
         <div className="flex gap-3 px-4 pb-4 overflow-x-auto no-scrollbar">
           <button className="flex h-9 shrink-0 items-center gap-2 rounded-xl bg-[#121614] dark:bg-white px-4 transition-transform active:scale-95">
-            <span className="text-xs font-semibold text-white dark:text-black">All</span>
+            <span className="text-xs font-semibold text-white dark:text-black">Todos</span>
           </button>
           <button className="flex h-9 shrink-0 items-center gap-2 rounded-xl bg-white dark:bg-card-dark border border-gray-200 dark:border-white/10 px-4 transition-transform active:scale-95">
-            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Top Rated</span>
+            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Mejor Valorados</span>
           </button>
           <button className="flex h-9 shrink-0 items-center gap-2 rounded-xl bg-white dark:bg-card-dark border border-gray-200 dark:border-white/10 px-4 transition-transform active:scale-95">
-            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Lowest Handicap</span>
+            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Menor Hándicap</span>
           </button>
         </div>
 
@@ -55,7 +55,7 @@ export const CaddieSelect: React.FC<CaddieSelectProps> = ({ onBack }) => {
               <div className="flex flex-col flex-1 justify-center">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="inline-block rounded-lg bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Course Specialist</span>
+                    <span className="inline-block rounded-lg bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary mb-1">Especialista del Campo</span>
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">Michael T.</h3>
                   </div>
                   <div className="flex items-center gap-1 text-amber-400">
@@ -66,21 +66,21 @@ export const CaddieSelect: React.FC<CaddieSelectProps> = ({ onBack }) => {
                 <div className="mt-1 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
                   <span className="font-medium bg-gray-100 dark:bg-white/5 px-1.5 py-0.5 rounded text-gray-700 dark:text-gray-300">HCP 4</span>
                   <span>•</span>
-                  <span>500+ Rounds</span>
+                  <span>500+ Rondas</span>
                 </div>
                 <div className="mt-3 flex items-center justify-between">
-                  <span className="text-base font-bold text-gray-900 dark:text-white">$120<span className="text-xs font-normal text-gray-500 ml-1">/round</span></span>
-                  <button className="h-8 rounded-xl bg-primary px-4 text-xs font-bold text-[#121614] transition-transform active:scale-95 shadow-lg shadow-primary/20">Select</button>
+                  <span className="text-base font-bold text-gray-900 dark:text-white">$120<span className="text-xs font-normal text-gray-500 ml-1">/ronda</span></span>
+                  <button className="h-8 rounded-xl bg-primary px-4 text-xs font-bold text-[#121614] transition-transform active:scale-95 shadow-lg shadow-primary/20">Elegir</button>
                 </div>
               </div>
             </div>
           </div>
 
           {[
-            { name: 'Sarah J.', role: 'PGA Associate', hcp: '2', price: '$150', rating: '5.0', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCK0aHKfeviFwXMMtOPsrD7Vzwi5PZu7GIGP6Ls4g1s0Fp9GIuJ1j0agNGkOuT1-c2-sMDxQGBcBBhQcvjBh2SCLtVt81n1qW-ABMEkhXRwIVnHsp0Kth-JWG5Y2K4xkScl7R6wCCdRDPRkGV092PwPuBJRi07mqZToe6b4gXUzH4pEYUAcV1x6rYmpb-9sEFT9SNlIAP7GGGaG9MVUK8-ZeLxAjKuKta1w23OMvxFWFmsTQv8ge8h0eCOkzREm4SGD4Q4xy6ZI40Zm" },
-            { name: 'David K.', role: 'Local Legend', hcp: '5', price: '$110', rating: '4.8', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDQBXx3MX_6KZxX4Rl5-tbwIcUkqU_8vzpKCxroWx4W9DG9Q3-OKmhzjikvkwcdn4hsSUuxsuXKJEGpjGPY1r80STnKjvamlJJYoT-VBQotN1Ewp0NEqiAblvia2dlZPt16jC5rC9_ClNOt9Iojo7J1VrmHJR_6XWQa1HehLBrLPI6Q8zyk_Y2_nZs-A7moYHPiEmxbPOYYGJCrioWDp5OvH8XDz9WN1w0qxaO518kR2GLB4IH-Lk8g5tSoj4VXcQwFOBSzQ6ZBbeWx" },
-            { name: 'Emma R.', role: 'Tour Exp.', hcp: '0', price: '$200', rating: '5.0', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBUeYbpXfmY5aXXieocznQ6ZwCtcUhBlGuTr4wRPX0mCGryVGus7mn6K5ugGOV1oroQsQyKBTr4-jCIph_DiXyT8FUxTEm-0JNaU4ax-f8wOq_wN5lY0k7r4usnug0nSuLDnUfDFLJmN4cv1BtaKCLCDvx_Mw38OMpnlq0AlhT-7QZJRd0LzeclNZ9tZNqdwCgtMHAdtyCxBGWTakTQq3aEbmMiAtSgkE0D1-853gx-tcsNTwufvrZwyz3rBG7LZ6pSh-8RqEKr-5Dt" },
-            { name: 'James L.', role: 'Caddie Master', hcp: '7', price: '$100', rating: '4.7', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCdmgEWcu7a6uCc7SwLUd3Q_Ebr_8zfgmhsdSKR5H5bPbZQsz1KMxyvmInM8AIQk3BNZjdoZWe9rxye9mHmzTKXtUpdRC6pXgn2fLwW95YKzmgv4mkKYNO1PQxTIAHUZ6xRW06fA3MRq2iL-93_-bBYJvgdRKgBcC-iQR3HhP2IhTgNtalWeVS3po7ffREPtYqpBb3C0ss4dIMbUaeUMJlc_SodGP3dupSATQo3JIhQ-FZang1sYgKn75fX3VvZrWUjqf95ZHnSgdJL" }
+            { name: 'Sarah J.', role: 'Asociada PGA', hcp: '2', price: '$150', rating: '5.0', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCK0aHKfeviFwXMMtOPsrD7Vzwi5PZu7GIGP6Ls4g1s0Fp9GIuJ1j0agNGkOuT1-c2-sMDxQGBcBBhQcvjBh2SCLtVt81n1qW-ABMEkhXRwIVnHsp0Kth-JWG5Y2K4xkScl7R6wCCdRDPRkGV092PwPuBJRi07mqZToe6b4gXUzH4pEYUAcV1x6rYmpb-9sEFT9SNlIAP7GGGaG9MVUK8-ZeLxAjKuKta1w23OMvxFWFmsTQv8ge8h0eCOkzREm4SGD4Q4xy6ZI40Zm" },
+            { name: 'David K.', role: 'Leyenda Local', hcp: '5', price: '$110', rating: '4.8', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDQBXx3MX_6KZxX4Rl5-tbwIcUkqU_8vzpKCxroWx4W9DG9Q3-OKmhzjikvkwcdn4hsSUuxsuXKJEGpjGPY1r80STnKjvamlJJYoT-VBQotN1Ewp0NEqiAblvia2dlZPt16jC5rC9_ClNOt9Iojo7J1VrmHJR_6XWQa1HehLBrLPI6Q8zyk_Y2_nZs-A7moYHPiEmxbPOYYGJCrioWDp5OvH8XDz9WN1w0qxaO518kR2GLB4IH-Lk8g5tSoj4VXcQwFOBSzQ6ZBbeWx" },
+            { name: 'Emma R.', role: 'Experiencia Tour', hcp: '0', price: '$200', rating: '5.0', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBUeYbpXfmY5aXXieocznQ6ZwCtcUhBlGuTr4wRPX0mCGryVGus7mn6K5ugGOV1oroQsQyKBTr4-jCIph_DiXyT8FUxTEm-0JNaU4ax-f8wOq_wN5lY0k7r4usnug0nSuLDnUfDFLJmN4cv1BtaKCLCDvx_Mw38OMpnlq0AlhT-7QZJRd0LzeclNZ9tZNqdwCgtMHAdtyCxBGWTakTQq3aEbmMiAtSgkE0D1-853gx-tcsNTwufvrZwyz3rBG7LZ6pSh-8RqEKr-5Dt" },
+            { name: 'James L.', role: 'Maestro Caddie', hcp: '7', price: '$100', rating: '4.7', img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCdmgEWcu7a6uCc7SwLUd3Q_Ebr_8zfgmhsdSKR5H5bPbZQsz1KMxyvmInM8AIQk3BNZjdoZWe9rxye9mHmzTKXtUpdRC6pXgn2fLwW95YKzmgv4mkKYNO1PQxTIAHUZ6xRW06fA3MRq2iL-93_-bBYJvgdRKgBcC-iQR3HhP2IhTgNtalWeVS3po7ffREPtYqpBb3C0ss4dIMbUaeUMJlc_SodGP3dupSATQo3JIhQ-FZang1sYgKn75fX3VvZrWUjqf95ZHnSgdJL" }
           ].map((caddie, idx) => (
             <div key={idx} className="group relative flex flex-col overflow-hidden rounded-[24px] bg-white dark:bg-card-dark shadow-sm border border-gray-100 dark:border-white/5">
               <div className="relative h-40 w-full overflow-hidden bg-gray-100">

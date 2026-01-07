@@ -25,12 +25,12 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentScreen, onNavigate 
         
         <button className={navItemClass(Screen.Dashboard)} onClick={() => onNavigate(Screen.Dashboard)}>
           <span className={iconClass} style={{ fontVariationSettings: currentScreen === Screen.Dashboard ? "'FILL' 1" : "'FILL' 0" }}>home</span>
-          <span className={labelClass(Screen.Dashboard)}>Home</span>
+          <span className={labelClass(Screen.Dashboard)}>Inicio</span>
         </button>
 
         <button className={navItemClass(Screen.Shop)} onClick={() => onNavigate(Screen.Shop)}>
           <span className={iconClass} style={{ fontVariationSettings: currentScreen === Screen.Shop ? "'FILL' 1" : "'FILL' 0" }}>shopping_bag</span>
-          <span className={labelClass(Screen.Shop)}>Shop</span>
+          <span className={labelClass(Screen.Shop)}>Tienda</span>
         </button>
 
         {/* Floating Action Button for AI Coach */}
@@ -45,12 +45,12 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentScreen, onNavigate 
 
         <button className={navItemClass(Screen.Tournaments)} onClick={() => onNavigate(Screen.Tournaments)}>
           <span className={iconClass} style={{ fontVariationSettings: currentScreen === Screen.Tournaments ? "'FILL' 1" : "'FILL' 0" }}>emoji_events</span>
-          <span className={labelClass(Screen.Tournaments)}>Events</span>
+          <span className={labelClass(Screen.Tournaments)}>Eventos</span>
         </button>
 
-        <button className={navItemClass(Screen.Caddies)} onClick={() => onNavigate(Screen.Caddies)}>
-          <span className={iconClass} style={{ fontVariationSettings: currentScreen === Screen.Caddies ? "'FILL' 1" : "'FILL' 0" }}>person</span>
-          <span className={labelClass(Screen.Caddies)}>Profile</span>
+        <button className={navItemClass(Screen.Profile)} onClick={() => onNavigate(Screen.Profile)}>
+          <span className={iconClass} style={{ fontVariationSettings: currentScreen === Screen.Profile ? "'FILL' 1" : "'FILL' 0" }}>person</span>
+          <span className={labelClass(Screen.Profile)}>Perfil</span>
         </button>
 
       </nav>

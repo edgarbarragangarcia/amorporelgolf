@@ -1,0 +1,21 @@
+{
+  "name": "Super App de Golf",
+  "short_name": "Golf App",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18181b",
+  "theme_color": "#51c878",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOF8TBU1r9mtjFfy86nTvrJlChozsVlEHi61d2DBiNR3Ws_UFrRW6ZghlxxYpSLhBwkosJ3TWdjw6YYeYlXj3679sACw0k_ev3UG4--PfTCkmEhsham5x_JVxgpd2fe0GN7MJ0jVvkptnvbBmxGvpXGJik0ckjBXTTB_9Fshvx6e9ufwjKDby1xXJdyd5li7roCr0WF_ejHZk7jcjX5O-5bG6aKvN9jAVdv9jvgq0TMfg48ky8pyF51ihc9Xoxj-Y5SlXQVvZ3LzoR",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOF8TBU1r9mtjFfy86nTvrJlChozsVlEHi61d2DBiNR3Ws_UFrRW6ZghlxxYpSLhBwkosJ3TWdjw6YYeYlXj3679sACw0k_ev3UG4--PfTCkmEhsham5x_JVxgpd2fe0GN7MJ0jVvkptnvbBmxGvpXGJik0ckjBXTTB_9Fshvx6e9ufwjKDby1xXJdyd5li7roCr0WF_ejHZk7jcjX5O-5bG6aKvN9jAVdv9jvgq0TMfg48ky8pyF51ihc9Xoxj-Y5SlXQVvZ3LzoR",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
